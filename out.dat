@@ -1,18 +1,9 @@
-galaxy name: Milky Way; hubble type: Sc; redshift: 3.76143e-314; total mass: 1.5e+12; stellar mass fraction: 6.67e-13
-
-galaxy name: Messier 49; hubble type: E0; redshift: 3.76143e-314; total mass: 0; stellar mass fraction: 0
-
-galaxy name: NGC 4921; hubble type: SBa; redshift: 3.76143e-314; total mass: 0; stellar mass fraction: 0
-
-galaxy name: dde Way; hubble type: Sc; redshift: 2.47033e-323; total mass: 1.5e+12; stellar mass fraction: 6.67e-13
-
-galaxy name: def 49; hubble type: E0; redshift: 2.47033e-323; total mass: 0; stellar mass fraction: 0
-
-galaxy name: de 4921; hubble type: SBa; redshift: 2.47033e-323; total mass: 0; stellar mass fraction: 0
-
+galaxy name: Milky Way; hubble type: Sc; redshift: 2.12242e-314; total mass: 1.5e+12; stellar mass fraction: 6.67e-13
+galaxy name: Messier 49; hubble type: E0; redshift: 2.12242e-314; total mass: 0; stellar mass fraction: 0
+galaxy name: NGC 4921; hubble type: SBa; redshift: 2.12242e-314; total mass: 0; stellar mass fraction: 0
+galaxy name: dde Way; hubble type: Sc; redshift: 2.12269e-314; total mass: 1.5e+12; stellar mass fraction: 6.67e-13
+galaxy name: def 49; hubble type: E0; redshift: 2.12269e-314; total mass: 0; stellar mass fraction: 0
+galaxy name: de 4921; hubble type: SBa; redshift: 2.12269e-314; total mass: 0; stellar mass fraction: 0
 galaxy name: ds Wy; hubble type: Sc; redshift: 0; total mass: 1.5e+12; stellar mass fraction: 6.67e-13
-
 galaxy name: gdfg 49; hubble type: E0; redshift: 0; total mass: 0; stellar mass fraction: 0
-
 galaxy name: vsfdg; hubble type: SBa; redshift: 0; total mass: 0; stellar mass fraction: 0
-

@@ -347,18 +347,21 @@ void export_data_to_file(std::vector<std::string> vector)
     outdata.close();
 }
 
-void search_for_object(std::string search_string)
+std::vector<std::string> search_for_object(std::string search_string)
 {
     std::ifstream file_stream("database.dat");
     std::string line;
     std::vector<std::string> search_results;
+    int count{0};
     while(getline(file_stream, line)) {
         if (line.find(search_string) != std::string::npos) {
             search_results.push_back(line);
+            count++;
         }
     }
-    export_data_to_file(search_results);
-    std::cout <<"Search results have been saved to out.dat"<< std::endl;
+    std::cout<<"There are "<<count<<" matching results: "<<std::endl;
+    print_vector(search_results);
+    return search_results;
 }
 
 std::tuple<std::vector<galaxy>, std::vector<star>, std::vector<planet>> read_from_file_to_vectors(std::string data_file)
@@ -533,6 +536,11 @@ void enter_new_object(std::vector<galaxy>& all_galaxies, std::vector<star>& all_
     insert_to_db_vectors(all_galaxies, all_stars, all_planets, galaxies_to_add, stars_to_add, planets_to_add);
 }
 
+void delete_object()
+{
+
+}
+
 int main ()
 {
     std::vector<galaxy> all_galaxies;
@@ -546,7 +554,7 @@ int main ()
     int function;
     std::string search;
 
-    std::tuple<std::vector<galaxy>, std::vector<star>, std::vector<planet>> results {read_from_file_to_vectors("data1.dat")};
+    std::tuple<std::vector<galaxy>, std::vector<star>, std::vector<planet>> results {read_from_file_to_vectors("initial_data.dat")};
 
     std::vector<galaxy> new_galaxy_vector{std::get<0>(results)};
     std::vector<star> new_star_vector{std::get<1>(results)};
@@ -561,7 +569,7 @@ int main ()
     print_vector(all_planets);
 
     std::cout<<"Now try enter some more objects into the database, now input a file name: "<<std::endl;
-    std::cout<<"N.B. Default file is called test.dat, if you want to import your own data, make sure they are in the same format."<<std::endl;
+    std::cout<<"N.B. Default file is called data1.dat, if you want to import your own data, make sure they are in the same format."<<std::endl;
     std::string new_file;
     std::cin>>new_file;
     std::tuple<std::vector<galaxy>, std::vector<star>, std::vector<planet>> results_1 {read_from_file_to_vectors(new_file)};
@@ -580,6 +588,8 @@ int main ()
         std::cout<<"3. Search for an object"<<std::endl;
         std::cout<<"4. Import data from one or multiple experiments, i.e. one or multiple files"<<std::endl;
         std::cout<<"5. Enter a new object to database"<<std::endl;
+        std::cout<<"6. Delete an object from the database"<<std::endl;
+        // std::cout<<". "<<std::endl;
         // std::cout<<". "<<std::endl;
         // std::cout<<". "<<std::endl;
 
@@ -614,17 +624,26 @@ int main ()
 
         } else if(function==3) {
             std::string search;
-            std::cout<<"Please input object name: "<<std::endl;
+            std::string save;
+            std::cout<<"Please input keyword for searching: "<<std::endl;
             std::cin>>search;
-            search_for_object(search);
+            std::vector<std::string> search_results {search_for_object(search)};
+            std::cout<<"Do you want to save these results into out.dat? press y to confirm, any other keys to skip"<<std::endl;
+            std::cin>>save;
+            if (save=="y") {
+                export_data_to_file(search_results);
+                std::cout <<"Search results have been saved to out.dat"<< std::endl;
+            }
         } else if(function==4) {
             import_multiple_files(all_galaxies,all_stars,all_planets);
         } else if(function==5) {
             enter_new_object(all_galaxies,all_stars,all_planets);
-        } 
-        // else if(function==6) {
+        } else if(function==6) {
+            delete_object();
+        }
+        else if(function==7) {
             
-        // }
+        }
 
         std::cout<<"Press y to exit the program, any other key to continue."<<std::endl;
         std::cin>>exit;
