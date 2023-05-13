@@ -1,20 +1,20 @@
-galaxy name: ds Wy; hubble type: Sc; redshift: 0; total mass: 1.5e+12; stellar mass fraction: 6.67e-13
+galaxy name: Milky Way; hubble type: Sc; redshift: 2.12242e-314; total mass: 1.5e+12; stellar mass fraction: 6.67e-13
 
-galaxy name: gdfg 49; hubble type: E0; redshift: 0; total mass: 0; stellar mass fraction: 0
+galaxy name: Messier 49; hubble type: E0; redshift: 2.12242e-314; total mass: 0; stellar mass fraction: 0
 
-galaxy name: vsfdg; hubble type: SBa; redshift: 0; total mass: 0; stellar mass fraction: 0
+galaxy name: NGC 4921; hubble type: SBa; redshift: 2.12242e-314; total mass: 0; stellar mass fraction: 0
 
-star name: gdfv; spectral type: G2V
+star name: Sun; spectral type: G2V
 
-star name: fvsdvds; spectral type: M1-2
+star name: Betelgeuse; spectral type: M1-2
 
-star name: cs A; spectral type: A0mA1 Va
+star name: Sirius A; spectral type: A0mA1 Va
 
-star name: bfdhdfgh B; spectral type: DA2
+star name: Sirius B; spectral type: DA2
 
-star name: dsfddsg Majoris; spectral type: O7.5Iabf + O9.7Ib
+star name: UW Canis Majoris; spectral type: O7.5Iabf + O9.7Ib
 
-star name: fvdcadsa; spectral type: (O9.5II + B1V +B0IV) + B3V
+star name: Mintaka; spectral type: (O9.5II + B1V +B0IV) + B3V
 
-planet name: vdgsgdf
+planet name: Earth
 
